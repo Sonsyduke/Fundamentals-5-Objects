@@ -157,22 +157,43 @@
 // console.log(bandInfo);
 
 // MDN exercise 3:
-const cat = {
-  name: "Bertie",
-  breed: "Cymric",
-  color: "white",
-  greeting: function () {
-    console.log(`Hello, said ${this.name} the ${this.breed}`);
-  },
-};
-const cat2 = {
-  name: "Matt",
-  breed: "Ginger",
-  color: "red",
-  greeting: function () {
-    console.log(`Hello, said ${this.name} the ${this.breed}`);
-  },
-};
+// const cat = {
+//   name: "Bertie",
+//   breed: "Cymric",
+//   color: "white",
+//   greeting: function () {
+//     console.log(`Hello, said ${this.name} the ${this.breed}`);
+//   },
+// };
+// const cat2 = {
+//   name: "Matt",
+//   breed: "Ginger",
+//   color: "red",
+//   greeting: function () {
+//     console.log(`Hello, said ${this.name} the ${this.breed}`);
+//   },
+// };
 
-cat.greeting();
-cat2.greeting();
+// cat.greeting();
+// cat2.greeting();
+
+// MDN exercise 4:
+// const Cat = {
+//   name: "Bertie",
+//   breed: "Cymric",
+//   color: "white",
+//   greeting: function () {
+//     console.log(`Hello, said ${this.name} the ${this.breed}`);
+//   },
+// };
+
+function Cat(name, breed, color) {
+  this.name = name;
+  this.breed = breed;
+  this.color = color;
+  this.greeting = function () {
+    console.log(`Hello, said ${this.name} the ${this.breed}`);
+  };
+}
+
+const cat1 = new Cat("Matt", "Ginger", "red");
