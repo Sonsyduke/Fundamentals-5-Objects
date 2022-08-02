@@ -40,19 +40,31 @@
 // console.log(sumOfSalaries(salaries));
 
 // Exercise 4
-let menu = {
-  width: 200,
-  height: 300,
-  title: "My menu",
+// let menu = {
+//   width: 200,
+//   height: 300,
+//   title: "My menu",
+// };
+
+// function multipleNumeric(obj) {
+//   for (let key in obj) {
+//     if (typeof obj[key] === "number") {
+//       obj[key] *= 2;
+//     }
+//   }
+// }
+
+// console.log(multipleNumeric(menu));
+// console.log(menu);
+
+// ================ MDN ================
+const person = {
+  name: ["Bob", "Smith"],
+  age: 32,
+  bio: function () {
+    console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);
+  },
+  introduceSelf: function () {
+    console.log(`Hi! I'm ${this.name[0]}.`);
+  },
 };
-
-function multipleNumeric(obj) {
-  for (let key in obj) {
-    if (typeof obj[key] === "number") {
-      obj[key] *= 2;
-    }
-  }
-}
-
-console.log(multipleNumeric(menu));
-console.log(menu);
