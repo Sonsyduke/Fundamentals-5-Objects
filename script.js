@@ -101,12 +101,57 @@
 // frankie.name;
 // frankie.introduceSelf();
 
-function Person(name) {
-  this.name = name;
-  this.introduceSelf = function () {
-    console.log(`Hi! I'm ${this.name}.`);
-  };
-}
+// function Person(name) {
+//   this.name = name;
+//   this.introduceSelf = function () {
+//     console.log(`Hi! I'm ${this.name}.`);
+//   };
+// }
 
-const salva = new Person("Salva");
-const frenkie = new Person("Frenkie");
+// const salva = new Person("Salva");
+// const frenkie = new Person("Frenkie");
+
+// MDN exercise 1:
+// const cat = {
+//   name: "Bertie",
+//   breed: "Cymric",
+//   color: "white",
+//   greeting: function () {
+//     console.log("Meow!");
+//   },
+// };
+
+// // Put your code here
+// const catName = cat["name"];
+// cat.greeting();
+// cat.color = "black";
+
+// MDN exercise 2:
+const band = {
+  name: "Boys 2 Men",
+  nationality: "USA",
+  genre: "RnB",
+  members: 4,
+  formed: 1988,
+  split: false,
+  albums: [
+    {
+      name: "Christmas Interpretations",
+      released: 1994,
+    },
+    {
+      name: "Evolution",
+      released: 1997,
+    },
+  ],
+};
+
+const bandInfo = `${band.name} was created back in ${
+  band.formed
+}, they have been active for ${2022 - band.formed}. They are from ${
+  band.nationality
+} and have ${band.members} members. They released their first album in ${
+  band.albums[0].released
+} named ${band.albums[0].name}`;
+
+console.log(bandInfo);
