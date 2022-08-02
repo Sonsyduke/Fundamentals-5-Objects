@@ -58,13 +58,45 @@
 // console.log(menu);
 
 // ================ MDN ================
-const person = {
-  name: ["Bob", "Smith"],
-  age: 32,
-  bio: function () {
-    console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);
-  },
-  introduceSelf: function () {
-    console.log(`Hi! I'm ${this.name[0]}.`);
-  },
-};
+// const person = {
+//   name: {
+//     first: "Bob",
+//     last: "Smith",
+//   },
+//   age: 32,
+//   bio: function () {
+//     console.log(
+//       `${this.name.first} ${this.name.last} is ${this.age} years old.`
+//     );
+//   },
+//   introduceSelf: function () {
+//     console.log(`Hi! I'm ${this.name.first}.`);
+//   },
+// };
+
+// person["name"]["last"] = "Lombard";
+// person["eyes"] = "hazel";
+// person.farewell = function () {
+//   console.log(`Bye everybody!`);
+// };
+
+// const myDataName = "height";
+// const myDataValue = "1.75m";
+// person[myDataName] = myDataValue;
+
+function createPerson(name) {
+  const obj = {};
+  obj.name = name;
+  obj.introduceSelf = function () {
+    console.log(`Hi!, I'm ${this.name}.`);
+  };
+  return obj;
+}
+
+const salva = createPerson("Salva");
+salva.name;
+salva.introduceSelf();
+
+const frankie = createPerson("Frankie");
+frankie.name;
+frankie.introduceSelf();
