@@ -127,31 +127,52 @@
 // cat.color = "black";
 
 // MDN exercise 2:
-const band = {
-  name: "Boys 2 Men",
-  nationality: "USA",
-  genre: "RnB",
-  members: 4,
-  formed: 1988,
-  split: false,
-  albums: [
-    {
-      name: "Christmas Interpretations",
-      released: 1994,
-    },
-    {
-      name: "Evolution",
-      released: 1997,
-    },
-  ],
+// const band = {
+//   name: "Boys 2 Men",
+//   nationality: "USA",
+//   genre: "RnB",
+//   members: 4,
+//   formed: 1988,
+//   split: false,
+//   albums: [
+//     {
+//       name: "Christmas Interpretations",
+//       released: 1994,
+//     },
+//     {
+//       name: "Evolution",
+//       released: 1997,
+//     },
+//   ],
+// };
+
+// const bandInfo = `${band.name} was created back in ${
+//   band.formed
+// }, they have been active for ${2022 - band.formed}. They are from ${
+//   band.nationality
+// } and have ${band.members} members. They released their first album in ${
+//   band.albums[0].released
+// } named ${band.albums[0].name}`;
+
+// console.log(bandInfo);
+
+// MDN exercise 3:
+const cat = {
+  name: "Bertie",
+  breed: "Cymric",
+  color: "white",
+  greeting: function () {
+    console.log(`Hello, said ${this.name} the ${this.breed}`);
+  },
+};
+const cat2 = {
+  name: "Matt",
+  breed: "Ginger",
+  color: "red",
+  greeting: function () {
+    console.log(`Hello, said ${this.name} the ${this.breed}`);
+  },
 };
 
-const bandInfo = `${band.name} was created back in ${
-  band.formed
-}, they have been active for ${2022 - band.formed}. They are from ${
-  band.nationality
-} and have ${band.members} members. They released their first album in ${
-  band.albums[0].released
-} named ${band.albums[0].name}`;
-
-console.log(bandInfo);
+cat.greeting();
+cat2.greeting();
